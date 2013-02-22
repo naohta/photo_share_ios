@@ -6,10 +6,9 @@
 //  Copyright (c) 2013 amaoto. All rights reserved.
 //
 
+BOOL selected;
 #import "ViewController.h"
-
 @interface ViewController ()
-
 @end
 
 @implementation ViewController
@@ -17,11 +16,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    selected = NO;
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
     NSLog(@"%s",__func__);
+    if(selected==YES) return;
+    selected = YES;
     UIImagePickerController* picker = [[UIImagePickerController alloc]init];
     picker.delegate = self;
     picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
@@ -43,3 +45,4 @@
 }
 
 @end
+
