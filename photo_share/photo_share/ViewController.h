@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController<UIActionSheetDelegate, UIImagePickerControllerDelegate>
+@property (weak, nonatomic) IBOutlet UITextView *textView;
 
 @end
