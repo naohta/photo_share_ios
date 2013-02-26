@@ -1,7 +1,3 @@
-//
-//  AppDelegate.m
-//  photo_share
-//
 //  Created by Naohiro OHTA on 2/22/13.
 //  Copyright (c) 2013 amaoto. All rights reserved.
 //
@@ -12,10 +8,14 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    _url_strings = @[@"http://photo.elasticbeanstalk.com/photo",@"http://Naos-Air11-Mid-2012.local:4567/photo"];
+    _url_string_index = 0;
     return YES;
 }
-							
+
+
+
+
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

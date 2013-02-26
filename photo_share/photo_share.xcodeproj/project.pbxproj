@@ -19,6 +19,7 @@
 		3578ED8316D697FF003BC622 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3578ED8116D697FF003BC622 /* MainStoryboard.storyboard */; };
 		3578ED8616D697FF003BC622 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3578ED8516D697FF003BC622 /* ViewController.m */; };
 		3578ED8E16D99C7A003BC622 /* R9HTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3578ED8D16D99C7A003BC622 /* R9HTTPRequest.m */; };
+		3578ED9116DB17A1003BC622 /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = 3578ED9016DB17A1003BC622 /* Settings.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,8 +39,10 @@
 		3578ED8216D697FF003BC622 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		3578ED8416D697FF003BC622 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		3578ED8516D697FF003BC622 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		3578ED8C16D99C7A003BC622 /* R9HTTPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = R9HTTPRequest.h; sourceTree = "<group>"; };
-		3578ED8D16D99C7A003BC622 /* R9HTTPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = R9HTTPRequest.m; sourceTree = "<group>"; };
+		3578ED8C16D99C7A003BC622 /* R9HTTPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = R9HTTPRequest.h; path = photo_share/R9HTTPRequest.h; sourceTree = "<group>"; };
+		3578ED8D16D99C7A003BC622 /* R9HTTPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = R9HTTPRequest.m; path = photo_share/R9HTTPRequest.m; sourceTree = "<group>"; };
+		3578ED8F16DB17A1003BC622 /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
+		3578ED9016DB17A1003BC622 /* Settings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Settings.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +62,7 @@
 		3578ED5D16D697FF003BC622 = {
 			isa = PBXGroup;
 			children = (
+				3578ED9216DB17DA003BC622 /* R9 */,
 				3578ED6F16D697FF003BC622 /* photo_share */,
 				3578ED6816D697FF003BC622 /* Frameworks */,
 				3578ED6716D697FF003BC622 /* Products */,
@@ -86,14 +90,14 @@
 		3578ED6F16D697FF003BC622 /* photo_share */ = {
 			isa = PBXGroup;
 			children = (
-				3578ED8C16D99C7A003BC622 /* R9HTTPRequest.h */,
-				3578ED8D16D99C7A003BC622 /* R9HTTPRequest.m */,
+				3578ED7016D697FF003BC622 /* Supporting Files */,
 				3578ED7816D697FF003BC622 /* AppDelegate.h */,
 				3578ED7916D697FF003BC622 /* AppDelegate.m */,
 				3578ED8116D697FF003BC622 /* MainStoryboard.storyboard */,
 				3578ED8416D697FF003BC622 /* ViewController.h */,
 				3578ED8516D697FF003BC622 /* ViewController.m */,
-				3578ED7016D697FF003BC622 /* Supporting Files */,
+				3578ED8F16DB17A1003BC622 /* Settings.h */,
+				3578ED9016DB17A1003BC622 /* Settings.m */,
 			);
 			path = photo_share;
 			sourceTree = "<group>";
@@ -110,6 +114,15 @@
 				3578ED7F16D697FF003BC622 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3578ED9216DB17DA003BC622 /* R9 */ = {
+			isa = PBXGroup;
+			children = (
+				3578ED8C16D99C7A003BC622 /* R9HTTPRequest.h */,
+				3578ED8D16D99C7A003BC622 /* R9HTTPRequest.m */,
+			);
+			name = R9;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,6 +195,7 @@
 				3578ED7A16D697FF003BC622 /* AppDelegate.m in Sources */,
 				3578ED8616D697FF003BC622 /* ViewController.m in Sources */,
 				3578ED8E16D99C7A003BC622 /* R9HTTPRequest.m in Sources */,
+				3578ED9116DB17A1003BC622 /* Settings.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,6 +318,7 @@
 				3578ED8B16D697FF003BC622 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
