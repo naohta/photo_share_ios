@@ -20,6 +20,8 @@
 		3578ED8616D697FF003BC622 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3578ED8516D697FF003BC622 /* ViewController.m */; };
 		3578ED8E16D99C7A003BC622 /* R9HTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3578ED8D16D99C7A003BC622 /* R9HTTPRequest.m */; };
 		3578ED9116DB17A1003BC622 /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = 3578ED9016DB17A1003BC622 /* Settings.m */; };
+		3578EDB016DDB819003BC622 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3578EDAF16DDB819003BC622 /* ImageIO.framework */; };
+		3578EDB216DDB821003BC622 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3578EDB116DDB821003BC622 /* MobileCoreServices.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +45,8 @@
 		3578ED8D16D99C7A003BC622 /* R9HTTPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = R9HTTPRequest.m; path = photo_share/R9HTTPRequest.m; sourceTree = "<group>"; };
 		3578ED8F16DB17A1003BC622 /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
 		3578ED9016DB17A1003BC622 /* Settings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Settings.m; sourceTree = "<group>"; };
+		3578EDAF16DDB819003BC622 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		3578EDB116DDB821003BC622 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +54,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3578EDB216DDB821003BC622 /* MobileCoreServices.framework in Frameworks */,
+				3578EDB016DDB819003BC622 /* ImageIO.framework in Frameworks */,
 				3578ED6A16D697FF003BC622 /* UIKit.framework in Frameworks */,
 				3578ED6C16D697FF003BC622 /* Foundation.framework in Frameworks */,
 				3578ED6E16D697FF003BC622 /* CoreGraphics.framework in Frameworks */,
@@ -62,6 +68,8 @@
 		3578ED5D16D697FF003BC622 = {
 			isa = PBXGroup;
 			children = (
+				3578EDB116DDB821003BC622 /* MobileCoreServices.framework */,
+				3578EDAF16DDB819003BC622 /* ImageIO.framework */,
 				3578ED9216DB17DA003BC622 /* R9 */,
 				3578ED6F16D697FF003BC622 /* photo_share */,
 				3578ED6816D697FF003BC622 /* Frameworks */,

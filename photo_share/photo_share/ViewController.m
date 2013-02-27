@@ -3,6 +3,9 @@
 #import "ViewController.h"
 #import "R9HTTPRequest.h"
 #import "AppDelegate.h"
+#import <ImageIO/ImageIO.h>
+#import <MobileCoreServices/UTCoreTypes.h>
+
 @interface ViewController ()
 @property(strong,nonatomic) NSMutableData* receivedOne;
 @end
@@ -37,11 +40,10 @@
     [picker dismissViewControllerAnimated:YES completion:^(){
         NSLog(@"%@",@"dismiss complete");
         UIImage* img = [info objectForKey:UIImagePickerControllerOriginalImage];
-        NSData* imgData = [[NSData alloc]initWithData:UIImageJPEGRepresentation(img,0.0)];
+        NSData* imgDataPre = [[NSData alloc]initWithData:UIImageJPEGRepresentation(img,0.0)];
+        NSData* imgData = [self dataWithMetaDataFormUIImage:[[UIImage alloc]initWithData:imgDataPre] ];
         NSLog(@"%@",@"imagData complete");
         
-        //NSURL *URL = [NSURL URLWithString:@"http://Naos-Air11-Mid-2012.local:4567/photo"];
-        //NSURL *URL = [NSURL URLWithString:@"http://photo.elasticbeanstalk.com/photo"];
         NSURL *URL = [NSURL URLWithString:_url_strings[_url_string_index]];
         R9HTTPRequest *request = [[R9HTTPRequest alloc] initWithURL:URL];
         [request setHTTPMethod:@"POST"];
@@ -60,6 +62,40 @@
         
     }];
 }
+
+- (NSData *)dataWithMetaDataFormUIImage:(UIImage *)image {
+    NSMutableData *imageData = [[NSMutableData alloc] init];
+    //http://blog.mudaimemo.com/2010/12/iosexif.html
+    
+    // メタデータ
+    NSMutableDictionary *metadata = [NSMutableDictionary dictionary];
+    
+    // メタデータ: 画像の高さと幅
+    /*
+    [metadata setObject:[NSNumber numberWithInt:1000]
+                 forKey:(NSString *)kCGImagePropertyPixelHeight];
+    [metadata setObject:[NSNumber numberWithInt:1000]
+                 forKey:(NSString *)kCGImagePropertyPixelWidth];
+    */
+    
+    // メタデータ: Exif
+    NSMutableDictionary *exif = [NSMutableDictionary dictionary];
+    //exif = [metadata objectForKey:(NSString *)kCGImagePropertyExifDictionary];
+    [exif setObject:@"ユーザーコメント" forKey:(NSString *)kCGImagePropertyExifUserComment];
+    [metadata setObject:exif forKey:(NSString *)kCGImagePropertyExifDictionary];
+    
+    
+    // CGImageDestination を利用して画像とメタデータをひ関連付ける
+    CGImageDestinationRef dest;
+    dest = CGImageDestinationCreateWithData((CFMutableDataRef)CFBridgingRetain(imageData), kUTTypeJPEG, 1, nil);
+    
+    CGImageDestinationAddImage(dest, image.CGImage, (CFDictionaryRef)CFBridgingRetain(metadata));
+    CGImageDestinationFinalize(dest);
+    CFRelease(dest);
+    
+    return imageData;
+}
+
 
 - (void)didReceiveMemoryWarning
 {
