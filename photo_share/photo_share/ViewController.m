@@ -73,6 +73,7 @@
 - (void)imagePickerController:(UIImagePickerController *)picker
 didFinishPickingMediaWithInfo:(NSDictionary *)info {
     NSURL *assetURL = [info objectForKey:UIImagePickerControllerReferenceURL];
+    [picker dismissViewControllerAnimated:YES completion:^(){
     
     if (assetURL) {
         ALAssetsLibraryAssetForURLResultBlock resultBlock = ^(ALAsset *asset) {
@@ -103,6 +104,7 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info {
                             }];
             */
             ALAssetRepresentation *rep = [asset defaultRepresentation];
+            
             Byte *buffer = (Byte*)malloc(rep.size);
             NSUInteger buffered = [rep getBytes:buffer fromOffset:0.0 length:rep.size error:nil];
             NSData* imgData = [NSData dataWithBytesNoCopy:buffer length:buffered freeWhenDone:YES];//this is NSData may be what you want
@@ -132,6 +134,9 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info {
                     NSLog(@"error:%@", error);
                 }];
     } else { NSLog(@"error"); }
+
+    }];
+    
 }
 
 

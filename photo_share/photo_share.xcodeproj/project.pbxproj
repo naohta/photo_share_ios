@@ -22,6 +22,21 @@
 		3578ED9116DB17A1003BC622 /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = 3578ED9016DB17A1003BC622 /* Settings.m */; };
 		3578ED9416DD983B003BC622 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3578ED9316DD983B003BC622 /* AssetsLibrary.framework */; };
 		3578ED9616DD987B003BC622 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3578ED9516DD987B003BC622 /* ImageIO.framework */; };
+		3578ED9916DD99EA003BC622 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3578ED7516D697FF003BC622 /* main.m */; };
+		3578ED9A16DD99EA003BC622 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3578ED7916D697FF003BC622 /* AppDelegate.m */; };
+		3578ED9B16DD99EA003BC622 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3578ED8516D697FF003BC622 /* ViewController.m */; };
+		3578ED9C16DD99EA003BC622 /* R9HTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3578ED8D16D99C7A003BC622 /* R9HTTPRequest.m */; };
+		3578ED9D16DD99EA003BC622 /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = 3578ED9016DB17A1003BC622 /* Settings.m */; };
+		3578ED9F16DD99EA003BC622 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3578ED9516DD987B003BC622 /* ImageIO.framework */; };
+		3578EDA016DD99EA003BC622 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3578ED9316DD983B003BC622 /* AssetsLibrary.framework */; };
+		3578EDA116DD99EA003BC622 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3578ED6916D697FF003BC622 /* UIKit.framework */; };
+		3578EDA216DD99EA003BC622 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3578ED6B16D697FF003BC622 /* Foundation.framework */; };
+		3578EDA316DD99EA003BC622 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3578ED6D16D697FF003BC622 /* CoreGraphics.framework */; };
+		3578EDA516DD99EA003BC622 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3578ED7216D697FF003BC622 /* InfoPlist.strings */; };
+		3578EDA616DD99EA003BC622 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 3578ED7B16D697FF003BC622 /* Default.png */; };
+		3578EDA716DD99EA003BC622 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3578ED7D16D697FF003BC622 /* Default@2x.png */; };
+		3578EDA816DD99EA003BC622 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3578ED7F16D697FF003BC622 /* Default-568h@2x.png */; };
+		3578EDA916DD99EA003BC622 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3578ED8116D697FF003BC622 /* MainStoryboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +62,8 @@
 		3578ED9016DB17A1003BC622 /* Settings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Settings.m; sourceTree = "<group>"; };
 		3578ED9316DD983B003BC622 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		3578ED9516DD987B003BC622 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		3578EDAD16DD99EA003BC622 /* photo_share copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "photo_share copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3578EDAE16DD99EB003BC622 /* photo_share copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "photo_share copy-Info.plist"; path = "/Users/nao/git/photo_share_ios/photo_share/photo_share copy-Info.plist"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +79,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3578ED9E16DD99EA003BC622 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3578ED9F16DD99EA003BC622 /* ImageIO.framework in Frameworks */,
+				3578EDA016DD99EA003BC622 /* AssetsLibrary.framework in Frameworks */,
+				3578EDA116DD99EA003BC622 /* UIKit.framework in Frameworks */,
+				3578EDA216DD99EA003BC622 /* Foundation.framework in Frameworks */,
+				3578EDA316DD99EA003BC622 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -74,6 +103,7 @@
 				3578ED6F16D697FF003BC622 /* photo_share */,
 				3578ED6816D697FF003BC622 /* Frameworks */,
 				3578ED6716D697FF003BC622 /* Products */,
+				3578EDAE16DD99EB003BC622 /* photo_share copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				3578ED6616D697FF003BC622 /* photo_share.app */,
+				3578EDAD16DD99EA003BC622 /* photo_share copy.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -153,6 +184,23 @@
 			productReference = 3578ED6616D697FF003BC622 /* photo_share.app */;
 			productType = "com.apple.product-type.application";
 		};
+		3578ED9716DD99EA003BC622 /* photo_share2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3578EDAA16DD99EA003BC622 /* Build configuration list for PBXNativeTarget "photo_share2" */;
+			buildPhases = (
+				3578ED9816DD99EA003BC622 /* Sources */,
+				3578ED9E16DD99EA003BC622 /* Frameworks */,
+				3578EDA416DD99EA003BC622 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = photo_share2;
+			productName = photo_share;
+			productReference = 3578EDAD16DD99EA003BC622 /* photo_share copy.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -175,6 +223,7 @@
 			projectRoot = "";
 			targets = (
 				3578ED6516D697FF003BC622 /* photo_share */,
+				3578ED9716DD99EA003BC622 /* photo_share2 */,
 			);
 		};
 /* End PBXProject section */
@@ -192,6 +241,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3578EDA416DD99EA003BC622 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3578EDA516DD99EA003BC622 /* InfoPlist.strings in Resources */,
+				3578EDA616DD99EA003BC622 /* Default.png in Resources */,
+				3578EDA716DD99EA003BC622 /* Default@2x.png in Resources */,
+				3578EDA816DD99EA003BC622 /* Default-568h@2x.png in Resources */,
+				3578EDA916DD99EA003BC622 /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -204,6 +265,18 @@
 				3578ED8616D697FF003BC622 /* ViewController.m in Sources */,
 				3578ED8E16D99C7A003BC622 /* R9HTTPRequest.m in Sources */,
 				3578ED9116DB17A1003BC622 /* Settings.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3578ED9816DD99EA003BC622 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3578ED9916DD99EA003BC622 /* main.m in Sources */,
+				3578ED9A16DD99EA003BC622 /* AppDelegate.m in Sources */,
+				3578ED9B16DD99EA003BC622 /* ViewController.m in Sources */,
+				3578ED9C16DD99EA003BC622 /* R9HTTPRequest.m in Sources */,
+				3578ED9D16DD99EA003BC622 /* Settings.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,6 +380,28 @@
 			};
 			name = Release;
 		};
+		3578EDAB16DD99EA003BC622 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "photo_share/photo_share-Prefix.pch";
+				INFOPLIST_FILE = "photo_share copy-Info.plist";
+				PRODUCT_NAME = "photo_share copy";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		3578EDAC16DD99EA003BC622 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "photo_share/photo_share-Prefix.pch";
+				INFOPLIST_FILE = "photo_share copy-Info.plist";
+				PRODUCT_NAME = "photo_share copy";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -324,6 +419,15 @@
 			buildConfigurations = (
 				3578ED8A16D697FF003BC622 /* Debug */,
 				3578ED8B16D697FF003BC622 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3578EDAA16DD99EA003BC622 /* Build configuration list for PBXNativeTarget "photo_share2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3578EDAB16DD99EA003BC622 /* Debug */,
+				3578EDAC16DD99EA003BC622 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
