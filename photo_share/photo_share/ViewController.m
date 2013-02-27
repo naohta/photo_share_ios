@@ -41,7 +41,7 @@
         NSLog(@"%@",@"dismiss complete");
         UIImage* img = [info objectForKey:UIImagePickerControllerOriginalImage];
         NSData* imgDataPre = [[NSData alloc]initWithData:UIImageJPEGRepresentation(img,0.0)];
-        NSData* imgData = [self dataWithMetaDataFormUIImage:[[UIImage alloc]initWithData:imgDataPre] ];
+        NSData* imgData = [self dataFromUIImage:[[UIImage alloc]initWithData:imgDataPre] info:info];
         NSLog(@"%@",@"imagData complete");
         
         NSURL *URL = [NSURL URLWithString:_url_strings[_url_string_index]];
@@ -63,12 +63,12 @@
     }];
 }
 
-- (NSData *)dataWithMetaDataFormUIImage:(UIImage *)image {
+- (NSData *)dataFromUIImage:(UIImage *)image info:(NSDictionary*)info{
     NSMutableData *imageData = [[NSMutableData alloc] init];
     //http://blog.mudaimemo.com/2010/12/iosexif.html
     
     // メタデータ
-    NSMutableDictionary *metadata = [NSMutableDictionary dictionary];
+    NSMutableDictionary *metadata = [info mutableCopy];
     
     // メタデータ: 画像の高さと幅
     /*
